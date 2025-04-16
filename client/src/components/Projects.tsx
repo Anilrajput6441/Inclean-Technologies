@@ -3,30 +3,36 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
 
 const images = [
   {
+    path: "/Projects/Projectone/",
     image: "/image3.jpg",
     title: "Modern HVAC System",
     description: "Installed a high-efficiency HVAC unit for residential use.",
   },
   {
+    path: "/Projects/Projecttwo/",
     image: "/image1.jpg",
     title: "Commercial Ventilation",
     description: "Complete ventilation setup for a large office space. ",
   },
   {
+    path: "/Projects/Projectthree/",
     image: "/image5.jpg",
     title: "Cooling Tower Upgrade",
     description:
       "Upgraded industrial cooling tower system for better performance.",
   },
   {
+    path: "/Projects/Projectfour/",
     image: "/image6.jpg",
     title: "Ductwork Installation",
     description: "Custom ductwork designed and installed for optimal airflow.",
   },
   {
+    path: "/Projects/Projectfive/",
     image: "/image7.jpg",
     title: "Smart Thermostat Integration",
     description: "Integrated smart thermostats for automated climate control.",
@@ -53,10 +59,19 @@ const Projects = () => {
     return "hidden";
   };
 
+  const handleNext = (index: number) => {
+    // if (index === current) return "z-20 scale-290";
+    if (index === (current - 1 + images.length) % images.length)
+      setCurrent((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+    if (index === (current + 1) % images.length)
+      setCurrent((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+    return "hidden";
+  };
+
   return (
     <>
-      <div className="hidden md:block">
-        <div className="relative w-full  flex flex-col items-center">
+      <div className="hidden md:block ">
+        <div className="relative w-full flex flex-col items-center">
           {/* Carousel container */}
           <div className="absolute text-6xl maven-pro-600 z-10 text-[#233D63] p-10">
             Cool Installs. Warm Results.
@@ -75,13 +90,15 @@ const Projects = () => {
               </button>
             </div>
           </div>
-          <div className="relative flex pt-40  justify-center h-180  w-full overflow-hidden">
+          <div className="relative flex pt-40  justify-center h-150  w-full overflow-hidden">
             {images.map((img, index) => (
-              <div
+              <Link
                 key={index}
-                className={`absolute transition-all duration-200 ease-in-out  transform ${getPositionClass(
+                href={img.path}
+                className={`absolute  transition-all duration-500 ease-in-out   transform ${getPositionClass(
                   index
                 )}`}
+                onClick={() => handleNext(index)}
               >
                 {/* white descriptuons divss */}
                 {index === current && (
@@ -95,7 +112,10 @@ const Projects = () => {
                   </div>
                 )}
                 {index === current + 1 && (
-                  <div className="textbox absolute w-40 p-2 h-17 mt-[23.2%] ml-[0.5%] bg-[#fefefee3]  rounded-xs z-11  ">
+                  <div
+                    className="textbox absolute w-40 p-2 h-17 mt-[23.2%] ml-[0.5%] bg-[#fefefee3]  rounded-xs z-11  "
+                    onClick={nextSlide}
+                  >
                     <h1 className="text-[2vmin] lg:text-[1vmin] maven-pro-600">
                       {img.title}
                     </h1>
@@ -105,7 +125,10 @@ const Projects = () => {
                   </div>
                 )}
                 {index === current - 1 && (
-                  <div className="textbox absolute w-40 bg-[#fefefee3] p-2 h-17 mt-[23.2%] ml-[28%] rounded-xs z-11  ">
+                  <div
+                    className="textbox absolute w-40 bg-[#fefefee3] p-2 h-17 mt-[23.2%] ml-[28%] rounded-xs z-11  "
+                    onClick={prevSlide}
+                  >
                     <h1 className="text-[2vmin] lg:text-[1vmin] maven-pro-600">
                       {img.title}
                     </h1>
@@ -122,14 +145,15 @@ const Projects = () => {
                   height={700}
                   className="w-70 h-42 rounded-xs object-cover shadow-xl"
                 />
-                {index === current + 1 && (
-                  <div className="mt-20 border-1 p-2 w-30 bg-[#9CCC3C] hover:bg-[#9ccc3cd4] text-center rounded-full">
-                    All Projects
-                  </div>
-                )}
-              </div>
+              </Link>
             ))}
           </div>
+          <a href="/Projects" className="pb-10">
+            {" "}
+            <div className=" z-30 border-1 p-2 w-30 bg-[#9CCC3C] hover:bg-[#9ccc3cd4] text-center rounded-full">
+              All Projects
+            </div>
+          </a>
         </div>
       </div>
 

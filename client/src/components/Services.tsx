@@ -28,7 +28,7 @@ const services = [
 ];
 
 export default function Services() {
-  const [selectedService, setSelectedService] = useState(services[0]);
+  const [selectedService, setSelectedService] = useState(services[1]);
 
   return (
     <>
