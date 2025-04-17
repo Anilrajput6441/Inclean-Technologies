@@ -42,7 +42,7 @@ const page = () => {
       {/* Tint Hero Section of each Project */}
       <div className="relative">
         {" "}
-        <div className="absolute w-full h-[90vh] bg-black opacity-75 "></div>
+        <div className="absolute w-full h-[60vh] lg:h-[90vh] bg-black opacity-75 "></div>
         <h1 className="absolute w-full h-full lg:h-[90vh] maven-pro-600 text-2xl md:text-5xl text-white flex flex-col justify-center items-center">
           Industrial Ventilation System
           <p className="text-sm lg:text-xl mt-10  font-normal">
@@ -54,7 +54,7 @@ const page = () => {
           alt="Industrial Ventilation System"
           width={900}
           height={600}
-          className="w-full h-[90vh]"
+          className="w-full h-[60vh] lg:h-[90vh]"
         />
       </div>
       {/* Below Tint Section  */}
@@ -185,8 +185,10 @@ const page = () => {
               that there are two different types of approaches. These two types
               are:
             </p>
-            <p className="mt-10">
-              <p>Dilution Ventilation –</p>
+            <h1 className="mt-10 maven-pro-600 text-xl ">
+              Dilution Ventilation –
+            </h1>
+            <p className="mt-3 bg-gray-200 p-5">
               This helps to reduce the concentration of the airborne contaminant
               by blending it with the outdoor air. The dilute ventilation system
               best comes into action at places where huge amounts of heat, bad
@@ -195,8 +197,8 @@ const page = () => {
               comparatively low, and there is less toxicity level. Also, it
               requires very minimal maintenance.
             </p>
-            <p className="mt-10">
-              <p>Local Exhaust –</p>
+            <h1 className="mt-10 maven-pro-600 text-xl ">Local Exhaust –</h1>
+            <p className="mt-3 bg-gray-200 p-5">
               This is the type of industrial ventilation that grasps the
               airborne impurities near their source and then exhausts them in a
               secure place. Local exhaust is used mainly in industrial areas
@@ -206,115 +208,157 @@ const page = () => {
               pollutants such as dust, metal fumes, etc. The local exhaust also
               consumes less energy compared to the dilution ventilation system.
             </p>
-            <Image src="/image4.jpg" alt="" width={900} height={600} />
-            <h1 className="maven-pro-600 text-3xl mt-10">
+            <Image
+              src="/image4.jpg"
+              alt=""
+              width={900}
+              height={600}
+              className="mt-10"
+            />
+            <h1 className="maven-pro-600 text-[#233C63] text-3xl mt-10">
               Required Technologies for Industrial Ventilation
             </h1>
-            <p className="mt-10">
+            <p className="mt-10 pl-10">
               When it comes to finalizing a design for the industrial
               ventilation system, various options can be considered under single
               and multiple technologies. Inclean provides you with the options
               mentioned below.
             </p>
-            <ul className="list-none space-y-4">
+            <ul className="list-none space-y-4 p-10">
               <li>
-                <strong>Industrial Air Filtration Systems:</strong> In this
-                system, oil mists, particulates, and all the other pollutants
-                are required to be filtered from the outer environment.
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Industrial Air Filtration Systems:
+                </strong>{" "}
+                In this system, oil mists, particulates, and all the other
+                pollutants are required to be filtered from the outer
+                environment.
               </li>
 
               <li>
-                <strong>Industrial Dust Collection:</strong> This is used to
-                convey, clean, and effectively capture airborne elements.
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Industrial Dust Collection:
+                </strong>{" "}
+                This is used to convey, clean, and effectively capture airborne
+                elements.
               </li>
 
               <li>
-                <strong>Explosion Protection:</strong> This is effective to deal
-                with combustible dust in industries where there are chances of
-                explosion.
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Explosion Protection:
+                </strong>{" "}
+                This is effective to deal with combustible dust in industries
+                where there are chances of explosion.
               </li>
 
               <li>
-                <strong>Industrial Fans & Blowers:</strong> This is the best
-                technology when it comes to the need for mechanical ventilation
-                for moving the air.
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Industrial Fans & Blowers:
+                </strong>{" "}
+                This is the best technology when it comes to the need for
+                mechanical ventilation for moving the air.
               </li>
 
               <li>
-                <strong>Industrial Noise Control:</strong> This industrial
-                ventilation technique comes into action when you need to
-                maintain the exterior and interior noise levels in the industry.
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Industrial Noise Control:
+                </strong>{" "}
+                This industrial ventilation technique comes into action when you
+                need to maintain the exterior and interior noise levels in the
+                industry.
               </li>
 
               <li>
-                <strong>Fire Protection for Dust Collection:</strong> It is
-                needed to maintain solids and liquids that are flammable.
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Fire Protection for Dust Collection:
+                </strong>{" "}
+                It is needed to maintain solids and liquids that are flammable.
               </li>
 
               <li>
-                <strong>Industrial Vacuum Systems:</strong> Industries need this
-                system to avoid deposition and for cleaning up combustible
-                particles.
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Industrial Vacuum Systems:
+                </strong>{" "}
+                Industries need this system to avoid deposition and for cleaning
+                up combustible particles.
               </li>
 
               <li>
-                <strong>Industrial Air Conveying Systems:</strong> It helps to
-                remove dirty elements from the hoods, ducts, or fans in the
-                industrial space.
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Industrial Air Conveying Systems:
+                </strong>{" "}
+                It helps to remove dirty elements from the hoods, ducts, or fans
+                in the industrial space.
               </li>
 
               <li>
-                <strong>Industrial Air Handlers:</strong> These air handlers
-                provide heating and cooling as per the requirements.
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Industrial Air Handlers:
+                </strong>{" "}
+                These air handlers provide heating and cooling as per the
+                requirements.
               </li>
 
               <li>
-                <strong>Air Filter Housings:</strong> Air filter housings are
-                needed to fit in side-access filter assemblies for MERV-rated
-                air filters.
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Air Filter Housings:
+                </strong>{" "}
+                Air filter housings are needed to fit in side-access filter
+                assemblies for MERV-rated air filters.
               </li>
 
               <li>
-                <strong>Ventilation of Large Industrial Facilities:</strong>{" "}
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Ventilation of Large Industrial Facilities:
+                </strong>{" "}
                 This technology is preferred when large air movement is required
                 in the industrial space.
               </li>
             </ul>
-            <h1 className="maven-pro-600">
+            <h1 className="maven-pro-600 text-[#233C63] text-3xl mt-10">
               Why do you need a proper industrial ventilation system
             </h1>
-            <p>
+            <p className="pl-10">
               There are various reasons why you need to have a good ventilation
               system in your industrial space.{" "}
             </p>
-            <ul className="list-none space-y-2 pb-10">
+            <ul className="list-none space-y-4  p-10">
               <li>
-                <strong>Continuous Fresh Air Supply:</strong> It will help to
-                provide your employees with a continuous supply of fresh air
-                from the outdoors.
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Continuous Fresh Air Supply:
+                </strong>{" "}
+                It will help to provide your employees with a continuous supply
+                of fresh air from the outdoors.
               </li>
 
               <li>
-                <strong>Protection from Heat & Gases:</strong> It will protect
-                industrial workers from heat and harmful gases.
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Protection from Heat & Gases:
+                </strong>{" "}
+                It will protect industrial workers from heat and harmful gases.
               </li>
 
               <li>
-                <strong>Reduced Risk of Explosion & Fire:</strong> Having a good
-                ventilation system will help to reduce the risks of explosion
-                and fire.
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Reduced Risk of Explosion & Fire:
+                </strong>{" "}
+                Having a good ventilation system will help to reduce the risks
+                of explosion and fire.
               </li>
 
               <li>
-                <strong>Minimized Exposure to Contaminants:</strong> A
-                well-built ventilation system will minimize exposure to airborne
-                contaminants.
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Minimized Exposure to Contaminants:
+                </strong>{" "}
+                A well-built ventilation system will minimize exposure to
+                airborne contaminants.
               </li>
 
               <li>
-                <strong>Substitute for Harmful Chemicals:</strong> If your
-                industry uses harmful chemicals, then having a well-built
-                ventilation system acts as a very good substitute.
+                <strong className="maven-pro-600 text-xl mt-5">
+                  Substitute for Harmful Chemicals:
+                </strong>{" "}
+                If your industry uses harmful chemicals, then having a
+                well-built ventilation system acts as a very good substitute.
               </li>
             </ul>
           </div>

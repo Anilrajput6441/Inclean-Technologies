@@ -11,10 +11,40 @@ import MarqueeComp from "./Marquee";
 const navItems = [
   { label: "Home", href: "/" },
   {
-    label: "Services",
+    label: "Projects",
+    href: "/Projects",
     dropdown: [
-      { label: "Residential", href: "/services/residential" },
-      { label: "Commercial", href: "/services/commercial" },
+      {
+        label: "Industrial Ventilation System",
+        href: "/Projects/Projectone/",
+      },
+      {
+        label: "Fume Extraction System",
+        href: "/Projects/Projecttwo/",
+      },
+      {
+        label: "Parking Ventilation System",
+        href: "/Projects/Projectthree/",
+      },
+      {
+        label: "Centralized Air Conditioning",
+        href: "/Projects/Projectfour/",
+      },
+      {
+        label: "Lift-well Pressurization",
+        href: "/Projects/Projectfive/",
+      },
+      {
+        label: "Aircraft Hanger Ventilation",
+        href: "/Projects/Projectsix/",
+      },
+    ],
+  },
+  {
+    label: "Products",
+    dropdown: [
+      { label: "Our Team", href: "/about/team" },
+      { label: "Vision", href: "/about/vision" },
     ],
   },
   {
@@ -84,7 +114,7 @@ export default function Navbar() {
 
               {/* Dropdown */}
               {item.dropdown && activeDropdown === index && (
-                <ul className="absolute top-full left-0 mt-2 bg-white shadow-lg rounded-md p-2 space-y-1 min-w-[160px]">
+                <ul className="absolute top-full  left-0  bg-white shadow-lg rounded-md p-2 space-y-1 min-w-[160px]">
                   {item.dropdown.map((drop, i) => (
                     <li key={i}>
                       <Link
