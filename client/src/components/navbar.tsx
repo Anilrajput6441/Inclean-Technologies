@@ -49,10 +49,11 @@ const navItems = [
   },
   {
     label: "About",
-    dropdown: [
-      { label: "Our Team", href: "/about/team" },
-      { label: "Vision", href: "/about/vision" },
-    ],
+    href: "/Aboutus",
+    // dropdown: [
+    //   { label: "Our Team", href: "/about/team" },
+    //   { label: "Vision", href: "/about/vision" },
+    // ],
   },
   { label: "Contact", href: "/contact" },
   { label: "Blog", href: "/blog" },

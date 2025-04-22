@@ -5,7 +5,7 @@ import Marquee from "react-fast-marquee";
 
 export default function MarqueeComp() {
   return (
-    <div className="overflow-hidden p-0.5 bg-[#9CCC3C] text-[2vmin]  whitespace-nowrap">
+    <div className="overflow-hidden p-0.5 bg-[#9CCC3C] text-lg md:text-[2.5vmin]  whitespace-nowrap">
       <Marquee>
         Inclean Technologies: Your Trusted Partner in Custom HVAC Solutions,
         Expertly Crafted for Industrial & Commercial Needs.{" "}
